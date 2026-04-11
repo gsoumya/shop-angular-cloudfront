@@ -50,6 +50,7 @@ import {
 export class ProductItemComponent {
   product = input.required<Product>();
   index = input.required<number>();
+  readonly productImageCount = 4;
 
   cartBtn = viewChild('cartBtn', { read: ElementRef<HTMLButtonElement> });
   countControls = viewChild('controls', { read: CartCountControlsComponent });
@@ -81,6 +82,12 @@ export class ProductItemComponent {
 
   remove(): void {
     this.#cartService.removeItem(this.id);
+  }
+
+  getProductImage(index: number): string {
+    const imageNumber = (index % this.productImageCount) + 1;
+
+    return `/assets/product-images/product-${imageNumber}.svg`;
   }
 
   /** Move focus to a corresponding control when controls switch */

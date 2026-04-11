@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Product image 3</title>
+  <desc id="desc">Decorative product placeholder image with blue gradient.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a18cd1" />
+      <stop offset="100%" stop-color="#fbc2eb" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)" />
+  <path d="M120 420 L260 230 L380 360 L480 250 L520 420 Z" fill="rgba(255,255,255,0.45)" />
+  <circle cx="200" cy="200" r="46" fill="rgba(255,255,255,0.55)" />
+</svg>
