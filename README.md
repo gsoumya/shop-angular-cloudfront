@@ -51,3 +51,16 @@ Most likely you are getting a message
 > husky - commit-msg script failed (code 1)
 
 To fix it you either need to follow conventional commit messages rules, or remove `.husky/pre-commit` file which enables the aforementioned rule.
+
+s3 url
+http://myshop-task2.s3-website-us-east-1.amazonaws.com/
+
+The REST endpoint is not shown directly here, but it is always in this format:
+BUCKET_NAME.s3.REGION.amazonaws.com
+myshop-task2.s3.us-east-1.amazonaws.com
+
+http://practice-myshop.s3-website-us-east-1.amazonaws.com/
+practice-myshop.s3.us-east-1.amazonaws.com
+
+cloudfront -url
+https://d3vy0mph3xhwxy.cloudfront.net/

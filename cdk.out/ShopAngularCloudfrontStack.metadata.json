@@ -1,0 +1,138 @@
+{
+  "/ShopAngularCloudfrontStack/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+      "data": true
+    }
+  ],
+  "/ShopAngularCloudfrontStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 2
+    }
+  ],
+  "/ShopAngularCloudfrontStack/CloudFrontUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CloudFrontUrl"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/S3WebsiteUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "S3WebsiteUrl"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/DistributionId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DistributionId"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/MyshopTask2CdkBucket/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyshopTask2CdkBucket1A0E77DE"
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketAutoDeleteObjects"
+      }
+    }
+  ],
+  "/ShopAngularCloudfrontStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/MyshopTask2CdkDistribution/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyshopTask2CdkDistributionE8840FB5"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/MyshopTask2CdkBucket/Policy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyshopTask2CdkBucketPolicyC125B653"
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketPolicyStatements"
+      }
+    }
+  ],
+  "/ShopAngularCloudfrontStack/MyshopTask2CdkBucket/AutoDeleteObjectsCustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyshopTask2CdkBucketAutoDeleteObjectsCustomResourceE0617CE0"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/DeployFrontend/AwsCliLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeployFrontendAwsCliLayerD774ED8F"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/DeployFrontend/CustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeployFrontendCustomResource3E02C3B7"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/MyshopTask2CdkDistribution/Origin1/S3OriginAccessControl/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MyshopTask2CdkDistributionOrigin1S3OriginAccessControl5F78EB8C"
+    }
+  ],
+  "/ShopAngularCloudfrontStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+    }
+  ]
+}
