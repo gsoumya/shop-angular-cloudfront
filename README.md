@@ -41,10 +41,3 @@ npm run cdk:destroy
 BUCKET_NAME.s3.REGION.amazonaws.com
 ```
 
-
->
-> ⓘ Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
->
-> husky - commit-msg script failed (code 1)
-
-To fix it you either need to follow conventional commit messages rules, or remove `.husky/pre-commit` file which enables the aforementioned rule.
