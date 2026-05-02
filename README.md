@@ -40,7 +40,8 @@ Follow the steps:
 ### Automated deployment (AWS CDK)
 
 - S3 website URL: http://myshop-task2-cdk.s3-website-us-east-1.amazonaws.com/
-- CloudFront URL: https://d354dzfm34mq3n.cloudfront.net/
+- CloudFront URL: https://d360sx6lq5b25q.cloudfront.net/
+- Distribution ID: EU0WCO1DCAPMZ
 
 ## Automated deployment commands (Task 2.2)
 
