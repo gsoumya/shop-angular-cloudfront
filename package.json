@@ -9,7 +9,14 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prepare": "husky",
-    "lint:format": "npx --no-install lint-staged && npx --no-install pretty-quick --staged"
+    "lint:format": "npx --no-install lint-staged && npx --no-install pretty-quick --staged",
+    "build:prod": "ng build --configuration=production",
+    "cdk:bootstrap": "cdk bootstrap --app \"npx ts-node --project cdk/tsconfig.json cdk/bin/shop-angular.cloudfront.ts\"",
+    "cdk:synth": "cdk synth --app \"npx ts-node --project cdk/tsconfig.json cdk/bin/shop-angular.cloudfront.ts\"",
+    "cdk:deploy": "cdk deploy --app \"npx ts-node --project cdk/tsconfig.json cdk/bin/shop-angular.cloudfront.ts\" --require-approval never",
+    "cdk:destroy": "cdk destroy --app \"npx ts-node --project cdk/tsconfig.json cdk/bin/shop-angular.cloudfront.ts\" --force",
+    "deploy": "npm run build:prod && npm run cdk:deploy",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E2IPGT1JJ9LWJ0 --paths \"/*\""
   },
   "private": true,
   "dependencies": {
@@ -44,6 +51,9 @@
     "@types/node": "^18.19.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
+    "aws-cdk": "^2.1118.0",
+    "aws-cdk-lib": "^2.248.0",
+    "constructs": "^10.6.0",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
@@ -61,6 +71,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "pretty-quick": "^4.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.3.3"
   },
   "lint-staged": {

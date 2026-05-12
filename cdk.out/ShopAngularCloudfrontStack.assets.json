@@ -1,0 +1,81 @@
+{
+  "version": "53.0.0",
+  "files": {
+    "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6": {
+      "displayName": "ShopAngularCloudfrontStack/Custom::S3AutoDeleteObjectsCustomResourceProvider Code",
+      "source": {
+        "path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "044099381264-us-east-1-9aa80b23": {
+          "bucketName": "cdk-hnb659fds-assets-044099381264-us-east-1",
+          "objectKey": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::044099381264:role/cdk-hnb659fds-file-publishing-role-044099381264-us-east-1"
+        }
+      }
+    },
+    "e2659170a0721541efa761a8d5d04d5e36cbbf691c4b15a9053002b7c825055d": {
+      "displayName": "DeployFrontend/AwsCliLayer/Code",
+      "source": {
+        "path": "asset.e2659170a0721541efa761a8d5d04d5e36cbbf691c4b15a9053002b7c825055d.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "044099381264-us-east-1-e6c37e61": {
+          "bucketName": "cdk-hnb659fds-assets-044099381264-us-east-1",
+          "objectKey": "e2659170a0721541efa761a8d5d04d5e36cbbf691c4b15a9053002b7c825055d.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::044099381264:role/cdk-hnb659fds-file-publishing-role-044099381264-us-east-1"
+        }
+      }
+    },
+    "3423a042b818e31c1e34a19d6689ab2e5f9b70fcbe9e71df66f241b20a200bd9": {
+      "displayName": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
+      "source": {
+        "path": "asset.3423a042b818e31c1e34a19d6689ab2e5f9b70fcbe9e71df66f241b20a200bd9",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "044099381264-us-east-1-9abfff13": {
+          "bucketName": "cdk-hnb659fds-assets-044099381264-us-east-1",
+          "objectKey": "3423a042b818e31c1e34a19d6689ab2e5f9b70fcbe9e71df66f241b20a200bd9.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::044099381264:role/cdk-hnb659fds-file-publishing-role-044099381264-us-east-1"
+        }
+      }
+    },
+    "d3e973976523a779b663d19348eba62118f4fc037bd66ab3e87ac40c88b88da7": {
+      "displayName": "DeployFrontend/Asset1",
+      "source": {
+        "path": "asset.d3e973976523a779b663d19348eba62118f4fc037bd66ab3e87ac40c88b88da7",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "044099381264-us-east-1-829976b5": {
+          "bucketName": "cdk-hnb659fds-assets-044099381264-us-east-1",
+          "objectKey": "d3e973976523a779b663d19348eba62118f4fc037bd66ab3e87ac40c88b88da7.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::044099381264:role/cdk-hnb659fds-file-publishing-role-044099381264-us-east-1"
+        }
+      }
+    },
+    "8d27ef2ad559f743b3b9f40a4af69e8792dce3217ac37622b8ed16889e00e868": {
+      "displayName": "shop-angular-cloudfront Template",
+      "source": {
+        "path": "ShopAngularCloudfrontStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "044099381264-us-east-1-df86b38d": {
+          "bucketName": "cdk-hnb659fds-assets-044099381264-us-east-1",
+          "objectKey": "8d27ef2ad559f743b3b9f40a4af69e8792dce3217ac37622b8ed16889e00e868.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::044099381264:role/cdk-hnb659fds-file-publishing-role-044099381264-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
