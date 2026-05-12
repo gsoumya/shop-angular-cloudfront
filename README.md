@@ -31,6 +31,35 @@ Useful maintenance command:
 npm run cdk:destroy
 ```
 
+## Task 5 deployment links
+
+### Automated deployment (AWS CDK)
+
+- CloudFront URL: https://d360sx6lq5b25q.cloudfront.net
+- S3 website URL: http://myshop-task2-cdk.s3-website-us-east-1.amazonaws.com/
+
+## Task 5 - S3 Import Integration
+
+The frontend is integrated with the backend Import Service (AWS Lambda + API Gateway + S3).
+
+### How it works
+
+1. User uploads a CSV file via **Admin → Manage Products**
+2. Frontend calls `GET https://z7z7s1eel4.execute-api.us-east-1.amazonaws.com/prod/import?name=<filename>` to get a pre-signed S3 URL
+3. Frontend PUTs the CSV file directly to S3 using the pre-signed URL
+4. S3 triggers the `importFileParser` Lambda which parses and logs each product row to CloudWatch
+
+### CSV format
+
+```csv
+id,title,description,price,count
+1,Product Name,Product description,19.99,100
+```
+
+### Verify upload
+
+Check **CloudWatch → Log groups → `/aws/lambda/importFileParser`** for parsed CSV rows after upload.
+
 ## Notes
 
 - CloudFront uses Origin Access Control (OAC) to access S3 privately.
@@ -40,4 +69,3 @@ npm run cdk:destroy
 ```text
 BUCKET_NAME.s3.REGION.amazonaws.com
 ```
-
