@@ -29,11 +29,19 @@ export class ManageProductsService extends ApiService {
     const url = this.getUrl('import', 'import');
 
     return this.http
-      .get<{ signedUrl: string }>(url, {
+      .get<{ signedUrl: string } | string>(url, {
         params: {
           name: fileName,
         },
       })
-      .pipe(map((res) => res.signedUrl));
+      .pipe(
+        map((res) => {
+          if (typeof res === 'string') {
+            return res;
+          }
+
+          return res.signedUrl;
+        }),
+      );
   }
 }

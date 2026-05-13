@@ -23,6 +23,7 @@ import { RouterLink } from '@angular/router';
 import { MatButton } from '@angular/material/button';
 import { FilePickerComponent } from '../../shared/file-picker/file-picker.component';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { NotificationService } from '../../core/notification.service';
 
 @Component({
   selector: 'app-manage-products',
@@ -51,6 +52,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 export class ManageProductsComponent {
   private readonly productsService = inject(ProductsService);
   private readonly manageProductsService = inject(ManageProductsService);
+  private readonly notificationService = inject(NotificationService);
 
   readonly columns = ['from', 'description', 'price', 'count', 'action'];
 
@@ -66,8 +68,15 @@ export class ManageProductsComponent {
       return;
     }
 
-    this.manageProductsService.uploadProductsCSV(selectedFile).subscribe(() => {
-      this.selectedFile.set(undefined);
+    this.manageProductsService.uploadProductsCSV(selectedFile).subscribe({
+      next: () => {
+        this.selectedFile.set(undefined);
+      },
+      error: () => {
+        this.notificationService.showError(
+          'CSV upload failed. Verify the import endpoint and file format.',
+        );
+      },
     });
   }
 }

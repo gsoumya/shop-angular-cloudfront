@@ -15,6 +15,14 @@ describe('ProductItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductItemComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('index', 0);
+    fixture.componentRef.setInput('product', {
+      id: 'p-1',
+      title: 'Test',
+      description: 'Test description',
+      price: 10,
+      count: 2,
+    });
     fixture.detectChanges();
   });
 

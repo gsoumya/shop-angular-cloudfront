@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 
 import { ProductsComponent } from './products.component';
+import { ProductsService } from './products.service';
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -9,6 +11,14 @@ describe('ProductsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ProductsComponent],
+      providers: [
+        {
+          provide: ProductsService,
+          useValue: {
+            getProducts: () => of([]),
+          },
+        },
+      ],
     }).compileComponents();
   });
 
