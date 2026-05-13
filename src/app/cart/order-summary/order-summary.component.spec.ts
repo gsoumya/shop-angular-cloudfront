@@ -15,6 +15,9 @@ describe('OrderSummaryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OrderSummaryComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('products', []);
+    fixture.componentRef.setInput('showControls', true);
+    fixture.componentRef.setInput('totalPrice', 0);
     fixture.detectChanges();
   });
 

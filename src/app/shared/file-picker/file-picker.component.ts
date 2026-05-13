@@ -13,6 +13,8 @@ export class FilePickerComponent {
 
   file = model<File>();
 
+  private readonly allowedMimeTypes = ['text/csv', 'application/vnd.ms-excel'];
+
   selectFile(files: FileList | null): void {
     if (!files?.length) {
       this.removeFile();
@@ -20,8 +22,10 @@ export class FilePickerComponent {
     }
 
     const file = files.item(0) as File;
+    const hasCsvExtension = file.name.toLowerCase().endsWith('.csv');
+    const hasCsvMimeType = this.allowedMimeTypes.includes(file.type);
 
-    if (!['text/csv', 'application/vnd.ms-excel'].includes(file.type)) {
+    if (!hasCsvExtension && !hasCsvMimeType) {
       this.removeFile();
       return;
     }
