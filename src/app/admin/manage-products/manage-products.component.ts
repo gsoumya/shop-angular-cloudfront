@@ -4,6 +4,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { ProductsService } from '../../products/products.service';
 import { ManageProductsService } from './manage-products.service';
 import { CurrencyPipe, DecimalPipe } from '@angular/common';
@@ -72,7 +73,26 @@ export class ManageProductsComponent {
       next: () => {
         this.selectedFile.set(undefined);
       },
-      error: () => {
+      error: (error: unknown) => {
+        const status =
+          error instanceof HttpErrorResponse && Number.isFinite(error.status)
+            ? error.status
+            : undefined;
+
+        if (status === 401) {
+          this.notificationService.showError(
+            'Unauthorized (401). Add a valid authorization_token to localStorage.',
+          );
+          return;
+        }
+
+        if (status === 403) {
+          this.notificationService.showError(
+            'Access denied (403). Verify your authorization_token credentials.',
+          );
+          return;
+        }
+
         this.notificationService.showError(
           'CSV upload failed. Verify the import endpoint and file format.',
         );

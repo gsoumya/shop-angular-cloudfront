@@ -55,6 +55,8 @@ export class ShopAngularCloudfrontStack extends Stack {
         ),
       ],
       destinationBucket: frontendBucket,
+      distribution,
+      distributionPaths: ['/*'],
     });
 
     new CfnOutput(this, 'CloudFrontUrl', {
